@@ -1,3 +1,5 @@
+
+
 names = ['John','Bob','kiran','arun','tarun']
 print(names[:-1])
 print(names)
@@ -17,3 +19,16 @@ result = sum_of_elements(numbers)
 print("Sum of elements: ", result)
 
 # Write a function that finds the largest and smallest elements in a list of integers.
+
+def find_largest_and_smallest(numbers):
+    if not numbers:
+        return None, None  # Return None if the list is empty
+
+    largest = smallest = numbers[0]  # Initialize both as the first element
+    for num in numbers[1:]:
+        if num > largest:
+            largest = num
+        elif num < smallest:
+            smallest = num
+
+    return largest, smallest

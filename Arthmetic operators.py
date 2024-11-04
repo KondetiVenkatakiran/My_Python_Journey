@@ -56,3 +56,44 @@ print(y)
 z = 90
 z -= 60
 print(z)
+
+
+# Create a calculator that performs basic arithmetic operations.
+#  here I amd defining function for every operation
+def add(x,y):
+    return x+y
+def sub(x,y):
+    return x-y
+def mul(x,y):
+    return x*y
+def div(x,y):
+    if y == 0:
+        return "Error! Division by Zero."
+    return x/y
+
+# Display option for the user
+print("Select operation: ")
+print("1. Add +")
+print("2. Sub -")
+print("3. Mul *")
+print("4. Div / ")
+
+# Take input from the user
+user_choice = input("Enter choice (1/2/3/4): ")
+if user_choice in ['1' ,'2' ,'3' ,'4']:
+    try:
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+        if user_choice == '1':
+            print(f"The result: {add(num1,num2)}")
+        elif user_choice == '2':(
+            print(f"The result: {sub(num1,num2)}"))
+        elif user_choice == '3':(
+            print(f"The result: {mul(num1,num2)}"))
+        elif user_choice == '4':(
+            print(f"The result: {div(num1,num2)}"))
+    except ValueError:
+        print("Invalid input! Please enter a valid number. ")
+
+else:
+    print("Invalid input! Please enter the valid operator")
